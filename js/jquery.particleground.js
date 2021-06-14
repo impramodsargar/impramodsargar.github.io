@@ -61,7 +61,7 @@
       //Create canvas
       canvas = document.createElement('canvas');
       canvas.className = 'pg-canvas';
-      canvas.style.display = 'block';
+      canvas.style.display = '';
       element.insertBefore(canvas, element.firstChild);
       ctx = canvas.getContext('2d');
       styleCanvas();
@@ -382,12 +382,12 @@
     density: 10000, // How many particles will be generated: one particle every n pixels
     dotColor: '#666666',
     lineColor: '#666666',
-    particleRadius: 7, // Dot size
-    lineWidth: 1,
-    curvedLines: false,
+    particleRadius: 5, // Dot size
+    lineWidth: 0.8,
+    curvedLines: true,
     proximity: 100, // How close two dots need to be before they join
     parallax: true,
-    parallaxMultiplier: 5, // The lower the number, the more extreme the parallax effect
+    parallaxMultiplier: 30, // The lower the number, the more extreme the parallax effect
     onInit: function() {},
     onDestroy: function() {}
   };
