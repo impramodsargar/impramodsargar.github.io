@@ -254,3 +254,1418 @@ class Date
     }
 }
 
+#4 Matrix.java
+import java.util.Scanner;
+
+public class Matrix {
+    int row, columns;
+    double arr[][];
+
+    public Matrix() {
+        row = 0;
+        columns = 0;
+        arr = new double[row][columns];
+    }
+
+    public Matrix(int r, int c) {
+        row = r;
+        columns = c;
+        arr = new double[row][columns];
+    }
+
+    public Matrix(double arr[][]) {
+        this.arr = arr;
+    }
+
+    public void initMatrix(Scanner scanner) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.println("Arr[" + i + "][" + j + "] = ");
+                arr[i][j] = scanner.nextInt();
+            }
+        }
+    }
+
+    public void display() {
+        System.out.println(this);
+    }
+
+    public Matrix addition(Matrix sec) {
+        if ((sec.row != row) || sec.columns != columns) {
+            return null;
+        } else {
+            double arr1[][] = new double[row][columns];
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = 0; j < arr[i].length; j++) {
+                    arr1[i][j] = arr[i][j] + sec.arr[i][j];
+                }
+            }
+            return new Matrix(arr1);
+        }
+    }
+
+    public Matrix subtraction(Matrix sec) {
+        if ((sec.row != row) || sec.columns != columns) {
+            return null;
+        } else {
+            double arr1[][] = new double[row][columns];
+            for (int i = 0; i < arr.length; i++) {
+                for (int j = 0; j < arr[i].length; j++) {
+                    arr1[i][j] = arr[i][j] - sec.arr[i][j];
+                }
+            }
+            return new Matrix(arr1);
+        }
+    }
+
+    public Matrix multiplication(Matrix sec) {
+        if (sec.row != columns) {
+            return null;
+        } else {
+            double c[][] = new double[row][sec.columns];
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < sec.columns; j++) {
+                    c[i][j] = 0;
+                    for (int k = 0; k < columns; k++) {
+                        c[i][j] += arr[i][k] * sec.arr[k][j];
+                    }
+                }
+            }
+            return new Matrix(c);
+        }
+    }
+
+    public Matrix division(Matrix sec) {
+        if (sec.row != columns) {
+            return null;
+        } else {
+            double c[][] = new double[row][sec.columns];
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < sec.columns; j++) {
+                    c[i][j] = 0;
+                    for (int k = 0; k < columns; k++) {
+                        c[i][j] += arr[i][k] / sec.arr[k][j];
+                    }
+                }
+            }
+            return new Matrix(c);
+        }
+    }
+
+    public Matrix scaleMatrix(double scale) {
+        double c[][] = new double[row][columns];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                c[i][j] = arr[i][j] * scale;
+            }
+        }
+        return new Matrix(c);
+    }
+
+    public Matrix transpose() {
+        double c[][] = new double[columns][row];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                c[j][i] = arr[i][j];
+            }
+        }
+        return new Matrix(c);
+    }
+
+    @Override
+    public String toString() {
+        String a = "";
+        for (int i = 0; i < arr.length; i++) {
+            a += "\n[";
+            for (int j = 0; j < arr[i].length; j++) {
+                a += "\t" + arr[i][j];
+            }
+            a += "\t]";
+        }
+        return a;
+    }
+}
+
+#4 MatrixTest.java 
+import java.util.Scanner;
+
+public class MatrixTest {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter dimensions of first matrix rows and columns respectively : ");
+        Matrix a = new Matrix(sc.nextInt(), sc.nextInt());
+        System.out.println("Enter elements of first matrix :\n");
+        a.initMatrix(sc);
+        System.out.println("Enter dimensions of second matrix rows and columns respectively : ");
+        Matrix b = new Matrix(sc.nextInt(), sc.nextInt());
+        System.out.println("Enter elements of second matrix :\n");
+        b.initMatrix(sc);
+        System.out.println("Addition of first and second matrix is :\n" + a.addition(b));
+        System.out.println("Substraction of first and second matrix is :\n" + a.subtraction(b));
+        System.out.println("Multiplication of first and second matrix is :\n" + a.multiplication(b));
+        System.out.println("Division of first and second matrix is :\n" + a.division(b));
+        System.out.println("Transpose of first matrix is :\n" + a.transpose());
+        System.out.println("Enter scale factor : ");
+        double scale = sc.nextDouble();
+        System.out.println("First matrix after scalling by " + scale + " :\n" + a.scaleMatrix(scale));
+    }
+}
+
+#5 Employee.java 
+public class Employee {
+    private String firstname;
+    private String lastname;
+    private double msalary;
+
+    public Employee() {
+        firstname = "";
+        lastname = "";
+        msalary = 0;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public void setMsalary(double msalary) {
+
+        this.msalary = msalary > 0 ? msalary : 0.0;
+    }
+
+    public String getFirstname() {
+        return this.firstname;
+    }
+
+    public String getLastname() {
+        return this.lastname;
+    }
+
+    public double getMsalary() {
+        return this.msalary;
+    }
+
+    public Employee(String firstname, String lastname, double msalary) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.msalary = msalary;
+    }
+
+    public double getYearlySalary() {
+        return this.msalary * 12;
+    }
+
+    public double incrementSalaryBy(double incrementByPercentage) {
+        this.msalary = msalary + ((msalary * incrementByPercentage) / 100);
+        return this.msalary;
+    }
+}
+#5 EmployeeTest.java
+import java.util.Scanner;
+
+public class EmployeeTest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Employee employee1 = new Employee();
+        Employee employee2 = new Employee();
+        System.out.println("\nEnter first employee details :");
+        System.out.println("First name :");
+        employee1.setFirstname(scanner.nextLine());
+        System.out.println("Last name :");
+        employee1.setLastname(scanner.nextLine());
+        System.out.println("Monthly salary :");
+        employee1.setMsalary(scanner.nextDouble());
+        scanner.reset();
+        scanner = new Scanner(System.in);
+        System.out.println("First name :");
+        employee2.setFirstname(scanner.nextLine());
+        System.out.println("Last name :");
+        employee2.setLastname(scanner.nextLine());
+        System.out.println("Monthly salary :");
+        employee2.setMsalary(scanner.nextDouble());
+        scanner.reset();
+        System.out.println("\nDetails of first employee : ");
+        System.out.println("Employee Details : \nFirstname : " + employee1.getFirstname() + "\nLastname : "
+                + employee1.getLastname() + "\nMonthly salary :" + employee1.getMsalary());
+        System.out.println("\nDetails of second employee : ");
+        System.out.println("Employee Details : \nFirstname : " + employee2.getFirstname() + "\nLastname : "
+                + employee2.getLastname() + "\nMonthly salary :" + employee2.getMsalary());
+        System.out.println("\nYearly salary of first employee :" + employee1.getYearlySalary());
+        System.out.println("\nYearly salary of second employee :" + employee2.getYearlySalary());
+        employee1.incrementSalaryBy(10);
+        employee2.incrementSalaryBy(10);
+        System.out.println("\nIncremented salary of first employee :" + employee1.getYearlySalary());
+        System.out.println("\nIncremented salary of second employee :" + employee2.getYearlySalary());
+
+        scanner.close();
+    }
+}
+
+#6 StackQueue 
+import java.util.*;
+
+interface stackInterface
+{
+   public int push(int no);
+   public int pop();
+   public int peek();
+   public void display(int a);
+}
+interface queueInterface
+{
+    public int enqueue(int d);
+    public int dequeue();
+    public void display();
+}
+class stackqueue implements stackInterface
+{
+   public int ssize=10,qsize=10;
+   public int sdata[]= new int[ssize]; 	
+   public int top;
+   public int qdata[] = new int[qsize];
+   public int front, rear;
+
+	stackqueue()
+	{
+		top=-1;
+		front=-1;
+		rear= -1;
+	}
+	public int push(int data)	
+	{
+		if (this.top == ssize - 1)
+		{	
+			return 0;	
+		}
+    	else
+    	{
+			this.top++;  
+			this.sdata[this.top] = data;
+    		return 1;
+		}
+	}
+
+   	public int pop()
+	{
+		if (this.top == -1)
+    		{	return 0;	}
+    	else
+    	{
+    		this.top--;    
+			return this.sdata[this.top + 1];    		
+		}
+	}
+
+	public int peek()
+	{
+		if (this.top == -1)
+    		{	return 0;	}
+    	else
+    	{
+			return this.sdata[this.top];   
+ 		}
+	}
+
+	public void display(int sqdisp)
+	{
+		if(sqdisp == 1)
+		{
+		    if (this.top == -1)
+    		{	
+				System.out.println("\n Stack Underflow ");		
+			}
+		    else
+		    {
+			    System.out.println("Elements present in Stack are : \n");
+			    for(int i=0 ; i<=top  ; i++)
+				System.out.println(sdata[i]);
+		    }
+		}
+		else
+		{
+			if (front== -1 && rear == -1)
+    		{	
+				System.out.println("\n Queue is Empty");		
+			}
+			else
+			{
+				System.out.println("Elements present in Queue are : \n");
+				for(int i=front ; i<=rear  ; i++)
+					System.out.println(qdata[i]);
+			}		
+		}	
+	}
+	public int enqueue(int data)
+	{
+		if (this.rear != qsize- 1)
+    	{
+			this.rear++;  
+			this.qdata[this.rear]=data;
+			if(front == -1)
+				front=0;
+        			return 1;
+    		}	
+    		else
+    		{	return 0;		}
+	}
+    	
+	public int dequeue()
+	{
+		if (this.front == -1)
+    	{	return 0;		}
+    	else
+    	{
+			int data = this.qdata[this.front];
+			this.qdata[this.front] = 0;
+       			 
+        	if (front == rear)
+    		{     
+				front = rear = -1;
+        	}
+			else
+				this.front++;
+        		return data;
+   	 	}
+	}
+}
+public class stackqueueTest
+{
+	Scanner sc = new Scanner(System.in);
+    public static void main(String arg[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int ch1,ch2,ch3,x,x2;
+      
+        stackqueue obj=new stackqueue();
+        do
+        {
+           System.out.println("1.Stack");
+           System.out.println("2.Queue");
+           System.out.println("3.Exit");
+           System.out.println("Enter your choice.....");
+           ch1=sc.nextInt();
+           switch(ch1)
+           {
+               case 1:
+                   do
+                   {
+                      System.out.println("1.Push");
+                      System.out.println("2.Pop");
+                      System.out.println("3.Peek");
+                      System.out.println("4.Display");
+                      System.out.println("5.Exit");
+                      System.out.println("Enter your choice.....");
+                      ch2=sc.nextInt();
+                      switch(ch2)
+                      {
+                        case 1:
+                                 System.out.println("\n Enter data : ");
+						         int data= sc.nextInt();
+						         if(obj.push(data)==1)
+							         System.out.println("\nPushed " + data + " successfully") ;
+						         else
+							        System.out.println("\nStack Overflow");
+                                 break;
+                        case 2:
+						        data = obj.pop();
+            					if(data != 0) 
+							        System.out.println("\n"+data  + " popped");
+                				else
+							        System.out.println("\nStack Underflow");
+                                break;
+                       case 3: 
+            				    if(obj.peek() !=0) 
+								    System.out.println("\n"+obj.peek()  + " peeked");
+                				else
+								    System.out.println("\nStack Underflow");
+                                 break;
+                        case 4:
+                                 obj.display(1);
+                                 break;
+                        case 5:
+                                 break;
+                        default:
+                                 System.out.println("Enter valid choice....");
+                                 break;
+                      }
+                   }while(ch2!=5);
+                   break;
+              case 2:
+                   do
+                   {
+                      System.out.println("1.Enqueue");
+                      System.out.println("2.Dequeue");
+                      System.out.println("3.Display");
+                      System.out.println("4.Exit");
+                      System.out.println("Enter your choice.....");
+                      ch3=sc.nextInt();
+                      switch(ch3)
+                      {
+                        case 1:
+                                System.out.println("\n Enter data : ");
+						        int data= sc.nextInt();
+						        int res=obj.enqueue(data);
+						        if(res==1)
+                                    System.out.println( data + " inserted successfully") ;
+                                else
+							        System.out.println("\nQueue is full");
+                                 break;
+                        case 2:
+                                data = obj.dequeue();
+            					if(data != 0) 
+							        System.out.println("\n"+data  + " removed");
+                				else
+							        System.out.println("\nQueue is empty");
+                                 break;
+                        case 3:
+                                obj.display(2);
+                                break;
+                        case 4:
+                                 break;
+                        default:
+                                 System.out.println("Enter valid choice....");
+                                 break;
+                      }
+                   }while(ch3!=4);
+                     break;
+                case 3:
+                        break;
+                default:
+                        System.out.println("Enter valid choice....");
+                        break;
+         }
+       }while(ch1!=3);
+    }
+}
+
+#7 Package 
+import java.util.Scanner;
+import MyMath.*;
+
+public class PackDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter angle in radians: ");
+        double angle = sc.nextDouble();
+        Trig newTrig = new Trig(Math.toDegrees(angle));
+        System.out.println("Sine = " + newTrig.getSine());
+        System.out.println("Cosecant = " + newTrig.getCosecant());
+        System.out.println("Tangent = " + newTrig.getTangent());
+        System.out.println("Cosine = " + newTrig.getCosine());
+        System.out.println("Cotangent = " + newTrig.getCotangent());
+        System.out.println("Secant = " + newTrig.getSecant());
+        System.out.println("\n\nEnter two numbers: ");
+        float x = sc.nextFloat(), y = sc.nextFloat();
+        Arithmetic maths = new Arithmetic(x, y);
+        System.out.format("Addition of %f and %f is %f", x, y, maths.add());
+        System.out.format("\nSubstraction of %f and %f is %f", x, y, maths.subtract());
+        System.out.format("\nMultiplication of %f and %f is %f", x, y, maths.multiply());
+        System.out.format("\nDivision of %f and %f is %f", x, y, maths.divide());
+
+        System.out.println("\n\nEnter Array Size for stats: ");
+        int size = sc.nextInt();
+        float arr[] = new float[size];
+        System.out.println("Enter array elements :");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextFloat();
+        }
+        Stat stats = new Stat(arr);
+        System.out.format("Min from array is %f", stats.getMin());
+        System.out.format("\nMax from array is %f", stats.getMax());
+        System.out.format("\nCount of array elements is %f", stats.getCount());
+        System.out.format("\nSum of array elements is %f", stats.getSum());
+        System.out.format("\nAverage of array elements is %f", stats.getAverage());
+        sc.close();
+    }
+}
+
+#7.1 triag inside mymath
+package MyMath;
+
+/**
+ * Trignometric Operations
+ */
+
+public class Trig {
+    private double angle;
+
+    public Trig(double angleInDegrees) {
+        this.angle = angleInDegrees;
+    }
+
+    public double getAngle() {
+        return angle;
+    }
+
+    public void setAngle(double angle) {
+        this.angle = angle;
+    }
+
+    public double getSine() {
+        return Math.sin(Math.toRadians(angle));
+    }
+
+    public double getCosine() {
+        return Math.cos(Math.toRadians(angle));
+    }
+
+    public double getTangent() {
+        return Math.tan(Math.toRadians(angle));
+    }
+
+    public double getSecant() {
+        return 1 / Math.sin(Math.toRadians(angle));
+    }
+
+    public double getCosecant() {
+        return 1 / Math.cos(Math.toRadians(angle));
+    }
+
+    public double getCotangent() {
+        return 1 / Math.tan(Math.toRadians(angle));
+    }
+}
+#7.2 Arithmatic.java 
+
+package MyMath;
+
+/**
+ * Arithmetic Operations
+ */
+public class Arithmetic {
+    float x;
+    float y;
+
+    public Arithmetic(float x, float y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public float getX() {
+        return this.x;
+    }
+
+    public float getY() {
+        return this.y;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public float add() {
+        return x + y;
+    }
+
+    public float subtract() {
+        return x - y;
+    }
+
+    public float multiply() {
+        return x * y;
+    }
+
+    public float divide() {
+        return x / y;
+    }
+}
+
+#Stat.java 
+package MyMath;
+
+/**
+ * Statistical Operations
+ */
+
+public class Stat {
+    private float array[];
+
+    public Stat(float[] array) {
+        this.array = array;
+    }
+
+    public void setArray(float[] array) {
+        this.array = array;
+    }
+
+    public float[] getArray() {
+        return this.array;
+    }
+
+    public float getMin() {
+        float min = array[0];
+        for (float element : array) {
+            if (element < min)
+                min = element;
+        }
+        return min;
+    }
+
+    public float getMax() {
+        float max = array[0];
+        for (float f : array) {
+            if (f > max)
+                max = f;
+        }
+        return max;
+
+    }
+
+    public float getCount() {
+        return array.length;
+    }
+
+    public float getSum() {
+        float sum = 0;
+        for (float element : array)
+            sum += element;
+        return sum;
+    }
+
+    public float getAverage() {
+        return getSum() / array.length;
+    }
+
+}
+
+#8 Exception Handling 
+import java.util.*;
+
+public class ExceptionAssignment {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int a=0, b=0;
+        int c = 0;
+        Operation o = new Operation();
+        while (c != 5) {
+            System.out.println("\n\n1:Addition\t2:Subtraction\n3:Multiplication\t4:Division\n5.Exit");
+            System.out.println("Enter your choice:");
+            c = sc.nextInt();
+            if (c != 5) {
+                System.out.println("Enter first number:");
+                a = sc.nextInt();
+                System.out.println("Enter second number:");
+                b = sc.nextInt();
+            }
+            try {
+                switch (c) {
+                    case 1:
+                        System.out.println("Addition is "+ o.add(a, b));
+                        break;
+                    case 2:
+                        System.out.println("Subtraction is "+ o.sub(a, b));
+                        break;
+                    case 3:
+                        System.out.println("Multiplication is "+o.mul(a, b));
+                        break;
+                    case 4:
+                        System.out.println("Division is "+ o.div(a, b));
+                        break;
+                    case 5:break;
+                    default:
+                        System.out.println("Invalid Input");
+                }
+            } catch (MyException e) {
+                System.out.println(e);
+            }
+        }
+        sc.close();
+    }
+}
+#8.1 
+public class MyException extends Exception
+{ 
+    MyException(String s)
+    {
+        super(s);
+    }    
+}
+#8.2
+public class Operation {
+    public int add(int a, int b) throws MyException {
+        int c = a + b;
+
+        if (c > 1000)
+            throw new MyException("TooLongAddition");
+        return c;
+
+    }
+
+    public int sub(int a, int b) throws MyException {
+        int c = a - b;
+
+        if (c < 0)
+            throw new MyException("NegativeAnswer");
+        return c;
+
+
+    }
+
+    public int mul(int a, int b) throws MyException {
+        int c = a * b;
+
+        if (c > 5000)
+            throw new MyException("TooLongMultiplication");
+     return c;
+    }
+
+    public float div(int a, int b) throws MyException {
+        if (b == 0)
+            throw new MyException("CantDivideByZero");
+        
+        return (float)a/b;
+    }
+}
+
+#9 fileinput readfile 
+import java.io.*;
+import java.util.Scanner;
+
+public class ReadFile {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter file name:");
+        String filename = sc.nextLine();
+        try {
+            FileInputStream reader = new FileInputStream(filename);
+            int i;
+            System.out.println("File content:");
+            while ((i = reader.read()) != -1) {
+                System.out.print((char) i);
+            }
+            System.out.println("\n");
+            reader.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("Specified file does not exist: " + filename);
+        } catch (IOException e) {
+            System.out.println("Error while reading the file");
+        }
+
+        System.out.println("Do you want to add content to the file? (y/n) :");
+        char r = sc.nextLine().toCharArray()[0];
+        if (r == 'y' || r == 'Y') {
+            try {
+                FileOutputStream writer = new FileOutputStream(filename, true);
+                System.out.println("Enter content to write:");
+                String content = sc.nextLine();
+                writer.write(content.getBytes());
+                writer.close();
+            } catch (IOException e) {
+                System.out.println("Unexpected error while writing to file: " + filename);
+            }
+
+        }
+        sc.close();
+    }
+}
+#9.1 Writefile filewriter 
+import java.io.*;
+import java.util.Scanner;
+
+public class ReadFile {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter file name:");
+        String filename = sc.nextLine();
+        try {
+            FileReader reader = new FileReader(filename);
+            int i;
+            System.out.println("File content:");
+            while ((i = reader.read()) != -1) {
+                System.out.print((char) i);
+            }
+            System.out.println("\n");
+            reader.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("Specified file does not exist: " + filename);
+        } catch (IOException e) {
+            System.out.println("Error while reading the file");
+        }
+
+        System.out.println("Do you want to add content to the file? (y/n) :");
+        char r = sc.nextLine().toCharArray()[0];
+        if (r == 'y' || r == 'Y') {
+            try {
+                FileWriter writer = new FileWriter(filename, true);
+                System.out.println("Enter content to write:");
+                String content = sc.nextLine();
+                writer.write(content);
+                writer.close();
+            } catch (IOException e) {
+                System.out.println("Unexpected error while writing to file: " + filename);
+            }
+
+        }
+        sc.close();
+    }
+}
+
+#10 Student.java file handling 
+import java.io.*;
+import java.util.Scanner;
+
+public class StudentInfo {
+    int rollNo;
+    String className;
+    int age;
+    int weight;
+    int height;
+    String city;
+    String phone;
+
+    public void getDetails(DataInputStream stream) throws IOException {
+        System.out.println("Enter student details :");
+        try {
+            System.out.println("Enter rollNo: ");
+            rollNo = Integer.parseInt(stream.readLine());
+            System.out.println("Enter className: ");
+            className = stream.readLine();
+            System.out.println("Enter age: ");
+            age = Integer.parseInt(stream.readLine());
+            System.out.println("Enter weight:");
+            weight = Integer.parseInt(stream.readLine());
+            System.out.println("Enter height:");
+            height = Integer.parseInt(stream.readLine());
+            System.out.println("Enter city:");
+            city = stream.readLine();
+            System.out.println("Enter phone:");
+            phone = stream.readLine();
+        } catch (NumberFormatException | IOException e) {
+            System.out.println("Error while reading file");
+        } finally {
+            stream.close();
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        String info = String.format("RollNo=%d\nClassName=%s\nAge=%d\nWeight=%d\nHeight=%d\nCity=%s\nPhone=%s", rollNo,
+                className, age, weight, height, city, phone);
+        return info;
+    }
+
+    public void writeDetails(FileOutputStream stream) throws IOException {
+        String info = String.format("%d\n%s\n%d\n%d\n%d\n%s\n%s", rollNo, className, age, weight, height, city, phone);
+        stream.write(info.getBytes());
+    }
+
+    public void readDetails(FileInputStream stream) throws IOException {
+        String s[] = new String(stream.readAllBytes()).split("\n");
+        if (s.length != 7)
+            throw new IOException("No data found");
+
+        rollNo = Integer.parseInt(s[0]);
+        className = s[1];
+        age = Integer.parseInt(s[2]);
+        weight = Integer.parseInt(s[3]);
+        height = Integer.parseInt(s[4]);
+        city = s[5];
+        phone = s[6];
+    }
+
+    public static void main(String[] args) {
+        Scanner sc;
+        StudentInfo info = new StudentInfo();
+        try {
+            FileInputStream fis = new FileInputStream("student.txt");
+            info.readDetails(fis);
+            System.out.println("Existing data in file :");
+            System.out.println(info);
+            fis.close();
+        } catch (IOException e) {
+            if (e.getMessage().equals("No data found")) {
+                System.out.println("No existing data found");
+            }
+        }
+        int c = 0;
+        while (c != 3) {
+            try {
+                System.out.println("Menu :\n1. Read\n2. Write\n3. Exit");
+                System.out.println();
+                sc = new Scanner(System.in);
+                c = sc.nextInt();
+                sc.close();
+                switch (c) {
+                    case 1:
+                        FileInputStream fis = new FileInputStream("student.txt");
+                        info.readDetails(fis);
+                        System.out.println("Existing data in file :");
+                        System.out.println(info);
+                        fis.close();
+                        break;
+                    case 2:
+                        info.getDetails(new DataInputStream(System.in));
+                        FileOutputStream fout = new FileOutputStream("student.txt");
+                        info.writeDetails(fout);
+                        fout.close();
+                        System.out.println("\nData written to file successfully");
+                        break;
+                    default:
+                        break;
+                }
+            } catch (IOException e) {
+                if (e.getMessage().equals("No data found")) {
+                    System.out.println("No existing data found");
+                }
+            }
+        }
+    }
+}
+#11 Calculator
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class MyCal implements ActionListener {
+
+    JButton bt1 = new JButton("add");
+    JButton bt2 = new JButton("sub");
+    JButton bt3 = new JButton("mul");
+    JButton bt4 = new JButton("div");
+
+    JTextArea tf1 = new JTextArea(1, 15);
+    JTextArea tf2 = new JTextArea(1, 15);
+
+    JLabel l = new JLabel("Ans :");
+
+    int count = 0;
+
+    MyCal() {
+        JFrame jf = new JFrame("Demo");
+        jf.setVisible(true);
+        jf.setSize(400, 400);
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+        jf.add(panel);
+
+        panel.add(tf1);
+        panel.add(tf2);
+        panel.add(l);
+        panel.add(bt1);
+        panel.add(bt2);
+        panel.add(bt3);
+        panel.add(bt4);
+        bt1.addActionListener(this);
+        bt2.addActionListener(this);
+        bt3.addActionListener(this);
+        bt4.addActionListener(this);
+    }
+
+    public static void main(String[] args) {
+        new MyCal();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        double a = Double.parseDouble(tf1.getText());
+        double b = Double.parseDouble(tf2.getText());
+        double ans=0;
+        switch (e.getActionCommand()) {
+            case "add":
+                ans = a + b;
+                break;
+            case "sub":
+                ans = a - b;
+                break;
+            case "mul":
+                ans = a * b;
+                break;
+            case "div":
+                ans = a / b;
+                break;
+            default:
+                break;
+        }
+        l.setText(ans+"");
+    }
+
+}
+#12 keyboard
+import javax.swing.*;
+import java.awt.event.*;
+
+public class KeyboardExample extends JFrame implements KeyListener {
+    JTextArea textArea;
+    JLabel label = new JLabel("None");
+
+    public KeyboardExample() {
+        super("KeyboardExample");
+        setLayout(null);
+        textArea = new JTextArea();
+        textArea.addKeyListener(this);
+        textArea.setBounds(0, 0, 200, 200);
+        label.setBounds(0, 200, 200, 100);
+        add(textArea);
+        add(label);
+        setSize(200, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        label.setText(e.getKeyChar() + " typed");
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        label.setText(e.getKeyChar() + " pressed");
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        label.setText(e.getKeyChar() + " released");
+    }
+
+    public static void main(String[] args) {
+        KeyboardExample keyboardExample = new KeyboardExample();
+    }
+}
+#12.1 mouse
+import javax.swing.*;
+import java.awt.event.*;
+
+public class MouseEventExample extends JFrame implements MouseListener, MouseMotionListener {
+    JLabel label = new JLabel("None");
+
+    public MouseEventExample() {
+        super("MouseEventExample");
+        setLayout(null);
+        addMouseListener(this);
+        addMouseMotionListener(this);
+        label.setBounds(0, 0, 400, 100);
+        add(label);
+        setSize(1200, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        MouseEventExample MouseEventExample = new MouseEventExample();
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        label.setBounds(e.getX(), e.getY(), 400, 100);
+        label.setText("Mouse Dragged to " + e.getX() + ", " + e.getY());
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        label.setBounds(e.getX(), e.getY(), 400, 100);
+        label.setText("Mouse moved to " + e.getX() + ", " + e.getY());
+
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        String cl = "";
+        switch (e.getButton()) {
+            case MouseEvent.BUTTON1:
+                cl = "Left";
+                break;
+            case MouseEvent.BUTTON2:
+                cl = "Wheel";
+                break;
+            case MouseEvent.BUTTON3:
+                cl = "Left";
+                break;
+        }
+        label.setText("Mouse " + cl + " button clicked at " + e.getX() + ", " + e.getY());
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        label.setText("Mouse pressed at " + e.getX() + ", " + e.getY());
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        label.setBounds(e.getX(), e.getY(), 400, 100);
+        label.setText("Mouse released at " + e.getX() + ", " + e.getY());
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        label.setText("Mouse entered to window");
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        label.setText("Mouse exited from window");
+
+    }
+}
+#14 cube thread 
+import java.util.Random;
+
+class Square extends Thread
+{
+	int x;
+	Square(int n)
+	{
+		x = n;
+	}
+
+	public void run()
+	{
+		int sqr = x * x;
+		System.out.println("Square of " + x + " = " + sqr );
+	}
+
+}
+
+class Cube extends Thread
+{
+	int x;
+	Cube(int n)
+	{
+		x = n;
+	}
+	public void run()
+	{
+		int cub = x * x * x;
+		System.out.println("Cube of " + x + " = " + cub );
+	}
+
+}
+
+class RandomNumberthread extends Thread
+{
+
+	public void run()
+	{
+
+		Random random = new Random();
+		for(int i =0; i<5; i++)
+		{
+			int randomInteger = random.nextInt(800);
+			System.out.println("Random Integer generated : " + randomInteger);
+			if ( randomInteger % 2 == 0 )
+			{
+				Square s = new Square(randomInteger);
+				s.start();
+			}
+			else
+			{
+				Cube c = new Cube(randomInteger);
+				c.start();
+			}
+
+			try
+			{
+
+				Thread.sleep(1000);
+			}
+			catch (InterruptedException ex)
+			{
+
+				System.out.println(ex);
+			}
+
+		}
+
+	}
+
+}
+
+public class Thread1
+{
+	public static void main(String args[])
+	{
+		RandomNumberthread n = new RandomNumberthread();
+		n.start();
+	}
+}
+#15 Arraylist 
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+    public static void main(String[] args) {
+        ArrayList<Book> bookList = new ArrayList<Book>();
+        bookList.add(new Book(1, "The First", "I'm Author", "I'm Publisher", 123));
+        bookList.add(new Book(2, "The Second", "I'm Author", "I'm Publisher", 123));
+        bookList.add(new Book(3, "The Third", "I'm Author", "I'm Publisher", 123));
+        System.out.println("Size of list : " + bookList.size());
+        System.out.println("\nElements from list are :");
+        for (Book b : bookList) {
+            System.out.println(b);
+        }
+        bookList.remove(1);
+        System.out.println("\nElements from list after removing one are :");
+        for (Book b : bookList) {
+            System.out.println(b);
+        }
+    }
+}
+#15.1 Book
+import java.util.Scanner;
+
+public class Book {
+    private int bookId;
+    private String bookName;
+    private String author;
+    private String publisher;
+    private int quantity;
+
+    public Book() {
+
+    }
+
+    public Book(int bookId, String bookName, String author, String publisher, int quantity) {
+        this.bookId = bookId;
+        this.bookName = bookName;
+        this.author = author;
+        this.publisher = publisher;
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "bookId='" + getBookId() + "'" + ", bookName='" + getBookName() + "'" + ", author='" + getAuthor() + "'"
+                + ", publisher='" + getPublisher() + "'" + ", quantity='" + getQuantity() + "'";
+    }
+
+    public int getBookId() {
+        return this.bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
+    public String getBookName() {
+        return this.bookName;
+    }
+
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
+    }
+
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getPublisher() {
+        return this.publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public int getQuantity() {
+        return this.quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+}
+#13 Notepad
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.Scanner;
+import java.io.*;
+
+public class Notepad extends JFrame implements ActionListener {
+    private TextArea textArea = new TextArea("", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
+    private MenuBar menuBar = new MenuBar();
+    private Menu file = new Menu("File");
+
+    private MenuItem openFile = new MenuItem("Open");
+    private MenuItem saveFile = new MenuItem("Save");
+    private MenuItem close = new MenuItem("Close");
+
+    public Notepad() {
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(500, 300);
+        this.setTitle("Java Notepad Tutorial");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.textArea.setFont(new Font("Century Gothic", Font.BOLD, 12));
+
+        //this.getContentPane().setLayout(new BorderLayout());
+        this.getContentPane().add(textArea);
+
+        this.setMenuBar(this.menuBar);
+        this.menuBar.add(this.file);
+        this.openFile.addActionListener(this);
+        
+        this.file.add(this.openFile);
+        this.saveFile.addActionListener(this);
+        
+        this.file.add(this.saveFile);
+        this.close.addActionListener(this);
+        this.file.add(this.close);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+
+        if (e.getSource() == this.close)
+            this.dispose();
+
+        else if (e.getSource() == this.openFile) {
+            JFileChooser open = new JFileChooser();
+            int option = open.showOpenDialog(this);
+
+            if (option == JFileChooser.APPROVE_OPTION) {
+                
+                try {
+
+                    FileInputStream fis = new FileInputStream(open.getSelectedFile());
+                    textArea.setText(new String(fis.readAllBytes()));
+                    fis.close();
+                } catch (Exception ex) {
+
+                    System.out.println(ex.getMessage());
+                }
+            }
+        }
+
+        else if (e.getSource() == this.saveFile) {
+            JFileChooser save = new JFileChooser();
+            int option = save.showSaveDialog(this);
+
+            if (option == JFileChooser.APPROVE_OPTION) {
+                try {
+
+                    BufferedWriter out = new BufferedWriter(new FileWriter(save.getSelectedFile().getPath()));
+                    out.write(this.textArea.getText());
+                    out.close();
+                } catch (Exception ex) {
+
+                    System.out.println(ex.getMessage());
+                }
+            }
+        }
+    }
+
+    public static void main(String args[]) {
+        Notepad app = new Notepad();
+        app.setVisible(true);
+
+    }
+}
