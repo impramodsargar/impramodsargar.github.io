@@ -1,0 +1,256 @@
+#1 Calendar
+public class DayOnDate {
+    
+    public static void main(String[] args) {
+        
+        int day, d, c, month, a[]={111,11,12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        String dayes[]={"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"}, 
+        day2;
+        
+        day = Integer.parseInt(args[0]);
+        month = Integer.parseInt(args[1]);
+        month = a[month];
+        d =Integer.parseInt(args[2]);
+        c =Integer.parseInt(args[2]);
+
+        if(month == 11 || month == 12)
+        {
+            d =d -1;
+            c =c -1;
+        }
+
+        d = d % 100;
+        System.out.println(d);
+        
+        c = c / 100;
+        System.out.println(c);
+
+        day= day + ((13*month-1)/5) +d + (d/4) +(c/4) - 2 * c;
+        
+        day = day % 7;
+
+        day2 = dayes[day];
+
+        System.out.println("the day on: "+args[0]+" "+args[1]+" "+args[2]+" is: "+day2);
+    }
+}
+
+#2 Saving account 
+public class SavingsAccountTest {
+    
+    public static void main(String[] args) {
+        
+        SavingsAccount saver1 =new SavingsAccount(2000);
+        SavingsAccount saver2 =new SavingsAccount(3000);
+
+        SavingsAccount.modifyInterestRate(4);
+
+        System.out.println("Balance of saver1 is: "+saver1.calculateMonthlyInterest());
+        System.out.println("Balance of saver2 is: "+saver2.calculateMonthlyInterest());
+
+
+        SavingsAccount.modifyInterestRate(5);
+
+        System.out.println("Balance of saver1 is: "+saver1.calculateMonthlyInterest());
+        System.out.println("Balance of saver2 is: "+saver2.calculateMonthlyInterest());
+
+    }
+}
+
+class SavingsAccount {
+
+    static float annualInterestRate;
+    float savingsBalance;
+
+    SavingsAccount(float savingsBalance) {
+
+        this.savingsBalance = savingsBalance;
+    }
+
+    static void modifyInterestRate(float annualInterestRate) {
+
+        SavingsAccount.annualInterestRate = annualInterestRate;
+    }
+
+    float calculateMonthlyInterest() {
+        
+        savingsBalance += (savingsBalance * (annualInterestRate / 100)) / 12;
+        return savingsBalance;
+    } 
+}
+
+#3 Inheritance student emp]
+import java.util.Scanner;
+import java.util.Calendar;
+
+
+public class InheretanceTest {
+    
+    public static void main(String[] args) {
+          
+       Student s = new Student();
+        Employee e = new Employee();
+
+        s.getData();
+        e.getData();
+        System.out.println("");
+        s.printData();
+        e.printData();
+        
+    }
+
+}
+
+
+class Person {
+
+    String name,address;
+    int height,weight,age;
+    Date d = new Date();
+
+    int year = Calendar.getInstance().get(Calendar.YEAR);
+
+    public int calculateAge() {
+
+        age = year - d.getYear();
+        return age;
+    } 
+
+}
+
+class Student extends Person {
+
+    int rollno, average;
+    int marks[] = new int [3];
+
+    Scanner sc = new Scanner(System.in);
+
+    public int calculateAverage() {
+
+        return (marks[0]+marks[1]+marks[2])/3;
+    }
+
+    void getData() {
+
+        System.out.println("Enter rollno of Student");
+        rollno = sc.nextInt();
+
+        System.out.println("Enter name of Student");
+        name = sc.next();
+        
+        System.out.println("Birth date in format dd/mm/yyyy");
+        d.getDate();
+
+        System.out.println("Enter height");
+        height = sc.nextInt();
+
+        System.out.println("Enter weight");
+        weight = sc.nextInt();
+
+        System.out.println("Enter address");
+        address = sc.next();
+
+        System.out.println("Enter marks of three subjects");
+        marks[0] = sc.nextInt();
+        marks[1] = sc.nextInt();
+        marks[2] = sc.nextInt();
+    }
+
+    void printData() {
+
+        System.out.println("Rollno of Student is: "+rollno);
+        System.out.println("Name of Student is: "+ name);
+        System.out.println("Birthdate if Student is: "+ d.getDay()+"/"+d.getMonth()+"/"+d.getYear());
+        System.out.println("Height of Student is: "+ height);
+        System.out.println("Weight of Student is: "+ weight);
+        System.out.println("Address of Student is: "+address);
+        System.out.println("Average of Student: "+calculateAverage());
+        System.out.println("Age of Student "+ calculateAge());
+    }
+
+}
+
+
+class Employee extends Person {
+
+    int empId, salary; 
+    
+
+    Scanner sc = new Scanner(System.in);
+
+    public double calculateTax() {
+        
+        return salary * 0.1;
+    }
+ 
+    void getData() {
+
+        System.out.println("Enter empId");
+        empId = sc.nextInt();
+
+        System.out.println("Enter name");
+        name = sc.next();
+        
+        System.out.println("Birth date in format dd/mm/yyyy");
+        d.getDate();
+
+        System.out.println("Enter height");
+        height = sc.nextInt();
+
+        System.out.println("Enter weight");
+        weight = sc.nextInt();
+
+        System.out.println("Enter address");
+        address = sc.next();
+
+        System.out.println("Enter Salary");
+        salary = sc.nextInt();
+    }
+
+    void printData() {
+
+        System.out.println("empId of Employee is: "+empId);
+        System.out.println("Name of Employee is: "+ name);
+        System.out.println("Birthdate if Employee is: "+ d.getDay()+"/"+d.getMonth()+"/"+d.getYear());
+        System.out.println("Height of Employee is: "+ height);
+        System.out.println("Weight of Employee is: "+ weight);
+        System.out.println("Address of Employee is: "+address);
+        System.out.println("tax ratr is 10% sof tax for Employeeis: "+calculateTax());
+        System.out.println("Age of Employee "+ calculateAge());
+    }
+
+}
+
+
+class Date
+{
+    private int day, month, year;
+    private String date, datearr[];
+
+    Scanner sc = new Scanner(System.in);
+
+
+    void getDate() {
+
+        date = sc.next();
+        datearr = date.split("/");
+
+        day =Integer.parseInt(datearr[0]);  
+        month = Integer.parseInt(datearr[1]); 
+        year = Integer.parseInt(datearr[2]);
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getYear() {
+        return year;
+    }
+}
+
