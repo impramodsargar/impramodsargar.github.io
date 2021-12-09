@@ -1,55 +1,456 @@
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-  <base target="_blank">
-  <meta charset="UTF-8" />
-  <title>impramodsargar</title>
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Personal Portfolio Website for Pramod Sargar"
+    />
+    <meta name="keywords" content="Pramod Sargar" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="../assets/img/logo_192.png" />
+    <title>impramodsargar</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#282828" />
 
-  <script src="./lib/three.min.js"></script>
-  <script src="./lib/CopyShader.js"></script>
-  <script src="./lib/DigitalGlitch.js"></script>
-  <script src="./lib/EffectComposer.js"></script>
-  <script src="./lib/RenderPass.js"></script>
-  <script src="./lib/MaskPass.js"></script>
-  <script src="./lib/ShaderPass.js"></script>
-  <script src="./lib/GlitchPass.js"></script>
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
-  <script src="./animation.js"></script>
-  <script src="./main.js"></script>
-  
-</head>
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
 
-<body>
-</div>
-<div id="animation" style="z-index:-100; position:absolute" ></div>
-      <div id="particles" style="z-index: -1"></div>
-        <div id="intro">
-          <div id="animation" style="z-index:-100; position:absolute" ></div>
-            <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10; font-size: 3.5vmax;">impramodsargar</h2>
-            <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
-            <br>
-          <a href="https://www.linkedin.com/in/impramodsargar/" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em; padding-left: 25px;"></i></a>
-          &nbsp;
-          <a href="https://github.com/impramodsargar/" style="color: white;"><i class="fab fa-github" style="font-size: 2em; padding-left: 25px;"></i></a>
-          &nbsp;
-          <a href="https://twitter.com/impramodsargar/" style="color: white;"><i class="fab fa-twitter" style="font-size: 2em; padding-left: 25px;"></i></a>
-          &nbsp;
-          <a href="mailto:sargarpramod430@gmail.com" style="color: white;"><i class="fa fa-envelope" style="font-size: 2em; padding-left: 25px;"></i></a>
-          &nbsp;
-          <a href="assets/ResumePramod.pdf" style="color: white;"><i class="fa fa-file" style="font-size: 2em; padding-left: 25px;"></i></a>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link href="css/styles.css" rel="stylesheet" rel="preload" as="style" />
+    <link
+      rel="stylesheet"
+      href="css/styles_600px_min.css"
+      media="(min-width: 600px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/styles_768px_min.css"
+      media="(min-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/styles_1200px_min.css"
+      media="(min-width: 1200px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/styles_1500px.css"
+      media="(min-width: 1500px)"
+    />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <ul>
+        <li>
+          <a
+            href="./assets/Pramod Sargar Resume.pdf"
+            target="__blank"
+            class="link"
+            >Resume</a
+          >
+        </li>
+        <li><a href="#" class="link">Blogs</a></li>
+        <li><a href="#" class="link">Slides</a></li>
+      </ul>
+    </div>
+
+    <div
+      id="profile"
+      class="section profile"
+      data-aos="fade-down"
+      data-aos-duration="800"
+      data-aos-easing="ease-out"
+    >
+      <div class="content">
+        <img
+          class="profile"
+          src="../assets/img/profile.jpg"
+          width="487px"
+          height="487px"
+          alt="Pramod Sargar - Profile Picture"
+        />
+        <h1 id="title">Pramod Sargar</h1>
+        <div class="typewriterContainer">
+          <h2 id="textTypeWriter"></h2>
+        </div>
+        <a
+          href="https://github.com/impramodsargar"
+          class="links"
+          target="_blank"
+          rel="noreferrer"
+          data-splitbee-event="Github"
+          data-splitbee-event-type="github"
+        >
+          <img
+            alt="Github Profile"
+            class="icon"
+            width="64px"
+            height="64px"
+            src="../assets/img/github.png"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/impramodsargar/"
+          class="links"
+          target="_blank"
+          rel="noreferrer"
+          data-splitbee-event="Linked In"
+          data-splitbee-event-type="linkedin"
+        >
+          <img
+            width="64px"
+            height="64px"
+            alt="LinkedIn Profile"
+            class="icon"
+            src="../assets/img/linkedin.png"
+          />
+        </a>
+        <a
+          href="https://twitter.com/impramodsargar"
+          class="links"
+          target="_blank"
+          rel="noreferrer"
+          data-splitbee-event="Twitter"
+          data-splitbee-event-type="twitter"
+        >
+          <img
+            alt="Twitter Profile"
+            class="icon"
+            width="64px"
+            height="64px"
+            src="../assets/img/twitter.png"
+          />
+        </a>
+        <a
+          href="https://instagram.com/impramodsargar"
+          class="links"
+          target="_blank"
+          rel="noreferrer"
+          data-splitbee-event="Instagram"
+          data-splitbee-event-type="instagram"
+        >
+          <img
+            alt="Instagram Profile"
+            class="icon"
+            width="64px"
+            height="64px"
+            src="../assets/img/instagram.png"
+          />
+        </a>
+      </div>
+      <p class="down">
+        <a href="#about" style="text-decoration: none">Scroll Down</a>
+      </p>
+    </div>
+
+    <div id="about" class="section about">
+      <div
+        class="content"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-easing="ease-out"
+      >
+        <h1 class="glitch" data-text="ABOUT ME">ABOUT ME</h1>
+
+        <p>Heyyy!</p>
+        <p>I'm Pramod Sargar, a Cyber Security Enthusiast and a Hacker</p>
+        <p>
+          I'm an Independent Security Researcher on @bugcrowd and @hackerone,
+          and I done my internship as web app pentester at Hack-X Security, I
+          have helped companies to secure themselves as a freelancer. I am
+          having experience in Web Application Security, Mobile Application
+          Security, Testing and excellent proficiency in some of the best tools
+          like Burpsuite, Acunetix and Nessus.
+        </p>
+
+        <p>
+          If you like what you see, or if you need to VAPT an app or website,
+          head over to the
+          <a href="#contact">Contact Me</a>
+          section below and shoot me a DM, I would love to hear from you!
+        </p>
+      </div>
+      <p class="down">
+        <a href="#skills" style="text-decoration: none">Scroll Down</a>
+      </p>
+    </div>
+
+    <div id="skills" class="section skills">
+      <div
+        class="content"
+        data-aos="fade-down"
+        data-aos-duration="800"
+        data-aos-easing="ease-out"
+      >
+        <h1>SKILLS</h1>
+        <div class="container">
+          <div class="row">
+            <div class="card" data-aos="fade-up">
+              <img
+                width="22px"
+                height="22px"
+                src="/assets/img/websec2.png"
+                alt="Web Application Security Testing"
+              />
+              <div class="card_text">
+                <h3>Web Application Security Testing</h3>
+                <p>BurpSuite, Sqlmap, Owasp Zap, Metasploit, Acunetix</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-up">
+              <img
+                width="22px"
+                height="30px"
+                src="/assets/img/mobile security.png"
+                alt="Mobile Application Security Testing"
+              />
+              <div class="card_text">
+                <h3>Mobile Application Security Testing</h3>
+                <p>MobSF, Apktool, Frida</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-up">
+              <img
+                src="/assets/img/apisec.png"
+                width="22px"
+                height="30px"
+                alt="API Security Testing"
+              />
+              <div class="card_text">
+                <h3>API Security Testing</h3>
+                <p>Postman, BurpSuite</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-up">
+              <img
+                width="22px"
+                height="30px"
+                src="/assets/img/netsec2.png"
+                alt="Network Security Testing"
+              />
+              <div class="card_text">
+                <h3>Network Security Testing</h3>
+                <p>Nmap, OpenVas, Nessus, Wireshark</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-up">
+              <img
+                src="/assets/img/web-server.png"
+                width="22px"
+                height="22px"
+                alt="Backend Development"
+              />
+              <div class="card_text">
+                <h3>Backend Development</h3>
+                <p>Spring Boot, Nodejs</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-up">
+              <img
+                width="22px"
+                height="22px"
+                src="/assets/img/database.png"
+                alt="Databases"
+              />
+              <div class="card_text">
+                <h3>Database Management Systems</h3>
+                <p>MongoDB, MySQL, Oracle</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-up">
+              <img
+                src="/assets/img/android.png"
+                alt="Android"
+                width="22px"
+                height="22px"
+              />
+              <div class="card_text">
+                <h3>Mobile App Development</h3>
+                <p>React Native, Android Studio, Java</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-up">
+              <img
+                width="22px"
+                height="22px"
+                src="/assets/img/coding.png"
+                alt="Other Languages"
+              />
+              <div class="card_text">
+                <h3>Other Languages</h3>
+                <p>Python 3, C, C++, Java, BASH, ASM</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <p class="down">
+        <a href="#projects" style="text-decoration: none">Scroll Down</a>
+      </p>
+    </div>
+
+    <div id="projects" class="section projects">
+      <div class="content" data-aos="fade-up" data-aos-duration="1000">
+        <h1>Experience</h1>
+        <div class="container default">
+          <div class="row"></div>
+        </div>
+        <br />
       </div>
-  </div>
 
- 
+      <div id="achievements" class="section achievements certifications">
+        <div class="content" data-aos="fade-in" data-aos-duration="1000">
+          <h1>ACHIEVEMENTS</h1>
+          <div class="container">
+            <div class="row">
+              <div class="card" data-aos="fade-in">
+                <h4>Technobharatit</h4>
+                <p><b>Winner :</b> 07 March 2019</p>
+              </div>
+              <div class="card" data-aos="fade-in">
+                <h4>Technocrat</h4>
+                <p><b>2nd Place :</b> 09 March 2019</p>
+              </div>
+              <div class="card" data-aos="fade-in">
+                <h4>IGNITION 2K19</h4>
+                <p><b>3RD Place :</b> 01 March 2019</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="down">
+          <a href="#hof" style="text-decoration: none">Scroll Down</a>
+        </p>
+      </div>
+      <div id="hof" class="hof">
+        <div class="content" data-aos="fade-in" data-aos-duration="1000">
+          <h1>HOF'S AND APPRECIATION FROM COMPANIES</h1>
+          <div class="container">
+            <div
+              class="row aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-duration="500"
+            >
+              <div class="card aos-init aos-animate">
+                <img src="/assets/img/Red-Hat-logo.png" alt="Google" />
+              </div>
+              <div class="card aos-init aos-animate">
+                <img src="/assets/img/honeywell.png" alt="Oneplus" />
+              </div>
+              <div class="card aos-init aos-animate">
+                <img src="/assets/img/Bosch_logo.png" alt="Dell" />
+              </div>
+              <div class="card aos-init aos-animate">
+                <img
+                  src="/assets/img/mastercard.png"
+                  alt="Mastercard"
+                  style="filter: invert(0)"
+                />
+              </div>
+              <div class="card aos-init aos-animate">
+                <img src="/assets/img/sony.jpg" alt="Nokia" />
+              </div>
+              <div class="card aos-init aos-animate">
+                <img src="/assets/img/IBM.png" alt="Philips" />
+              </div>
+              <div class="card aos-init aos-animate">
+                <img
+                  src="/assets/img/Toyota-Logo-PNG-Clipart.png"
+                  alt="ECCouncil"
+                />
+              </div>
+              <div class="card aos-init aos-animate">
+                <span>And many more</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="down">
+        <a href="#contact" style="text-decoration: none">Scroll Down</a>
+      </p>
+    </div>
 
-</body>
+    <div id="contact" class="section contact">
+      <div class="content">
+        <h1>CONTACT</h1>
+        <form
+          action="/"
+          method="post"
+          id="contactForm"
+          data-splitbee-event="Contact Form"
+        >
+          <div class="name" data-aos="fade-up">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Bilbo Baggins"
+              required
+            />
+          </div>
+          <div class="email" data-aos="fade-up">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="bilbo@hobbits.com"
+              required
+            />
+          </div>
+          <div class="message" data-aos="fade-up">
+            <label for="message">Message:</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="If ever you are passing my way. Don’t wait to knock! Tea is at four, but any of you are welcome at any time!"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" id="messageSubmit" data-aos="fade-up">
+            <img
+              width="16px"
+              height="16px"
+              alt="Send Email"
+              class="sendMail"
+              src="../assets/img/send.svg"
+            />
+            <span> Send </span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="section end" data-aos="fade-up" data-aos-duration="1000">
+      <a href="#profile" id="up">Scroll Up</a>
+      <div class="content">
+        <p>
+          Made with
+          <b id="heart"> ❤️ </b>
+          by <a href="https://github.com/impramodsargar">impramodsargar</a>
+          <b> & </b
+          ><a href="https://github.com/mr-compilerMS" target="__blank"
+            >themrcompiler</a
+          >
+        </p>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="js/app.js"></script>
+    <script async src="js/mail.js"></script>
+  </body>
 </html>
