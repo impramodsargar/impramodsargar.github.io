@@ -47,6 +47,29 @@
       href="css/styles_1500px.css"
       media="(min-width: 1500px)"
     />
+    <style>
+    .heart {
+            animation: change 1s infinite;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.rem;
+            font-weight: 400;
+        }
+
+        @keyframes change {
+            0% {
+                color: rgb(255, 0, 0)
+                
+            }
+
+            50% {
+                color: #fc0
+            }
+
+            99% {
+                color: #1e1003
+            }
+        }
+    </style>
   </head>
 
   <body>
@@ -439,7 +462,7 @@
       <div class="content">
         <p>
           Made with
-          <b id="heart"> ❤️ </b>
+          <b id="heart" class='heart'> ❤️ </b>
           by <a href="https://github.com/impramodsargar">impramodsargar</a>
           <b> & </b
           ><a href="https://github.com/mr-compilerMS" target="__blank"
