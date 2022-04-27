@@ -1,0 +1,1968 @@
+==============================================================================
+
+Experiment No. 1
+Title: Create Web Pages using HTML5.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <!-- <link rel="stylesheet" href="Resume_css.css"> -->
+</head>
+<body>
+    <div id="info"> 
+        <h1>Pranav Yashwant Bhokare</h1>
+        <p>21/1190, Jawahar Nagar <br>Ichalkaranji, 416 115 <br>pranavbhokare1155@gmail.com <br>Contact No. 8788396141</p>        
+    </div>
+    <hr>
+    <div id="obj">
+        <h2>Objective</h2>
+        <p><pre>
+            IT fresher with an excellent academic record and internship experience of over 3 month with Cloud Service based company AWS.
+            Good at implementing solutions and proficient in using various tools-technologies and UI, Web Page designing.<pre></p>
+    </div>
+    <hr>
+    <div id="qual">
+        <h2>Qualification</h2>
+        <p>Self-motivated and highly reliable university student positioned to contribute strongly to customer service operations demanding tact, enthusiasm, and an exemplary work ethic.</p>
+        <ul>
+            <li><span>Communication and Presentation : </span> Charismatic communicator in speech and in writing. Build lasting relationships with both peers and customers, displaying humor, helpfulness, cheerfulness, and cultural sensitivity.</li>
+            <li><span>Key Strengths : </span>Intelligent and loyal team member, readily listening to others, acknowledging peer accomplishment, and contributing to positive and productive work environments and team morale. Swiftly learn and apply new work methods, procedures, and policies.</li>
+            <li>Active volunteer in NSS for 3 years</li>
+        </ul>
+    </div>
+    <hr>
+    <div id="edu">
+        <h2>Education</h2>
+        <p>
+            <span id="id1"><b>Bachelor of Computer Science : </b></span>8.85 CGPA (2019-current)<br>
+            DKTE Society's Textile and Engg. Institute, Ichalkaranji, Maharashtra<br>
+            Pursuing <br>
+        </p>
+        <p>
+            <span id="id1"><b>Higher Secondary School : </b></span>82.00% (2017-2019) <br>Ichalkaranji High School and Jr. College, Ichalkaranji, Maharashtra<br>
+            Completed <br>
+        </p>
+        <p>
+            <span id="id1"><b>Secondary School : </b></span>95.00% (2016-2017) <br>
+            Saraswati High School, Ichalkaranji, Maharashtra <br>
+            Completed <br>
+        </p>     
+    </div>
+    <hr>    
+    <div>
+        <h2>Projects</h2>
+        <ul>
+            <li>Bit String Recording</li>
+            <li>Hand Guesture Recognization</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Programming Skills</h2>
+        <ul>
+            <li>C (Intermediate) </li>
+            <li>CPP (Advance) </li>
+            <li>Java (Intermediate) </li>
+            <li>Python (Intermediate) </li>
+            <li>Web Tehnology (Intermediate) </li>
+        </ul>
+    </div>
+    <hr>
+</body>
+</html>
+
+
+==============================================================================
+Experiment No 2
+Title: Apply CSS to web pages created after developing the HTML5 pages.
+
+HTML FILE:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="Resume_css.css">
+</head>
+<body>
+    <div id="info"> 
+        <h1>Pranav Yashwant Bhokare</h1>
+        <p>21/1190, Jawahar Nagar <br>Ichalkaranji, 416 115 <br>pranavbhokare1155@gmail.com <br>Contact No. 8788396141</p>        
+    </div>
+    <hr>
+    <div id="obj">
+        <h2>Objective</h2>
+        <p><pre>
+            IT fresher with an excellent academic record and internship experience of over 3 month with Cloud Service based company AWS.
+            Good at implementing solutions and proficient in using various tools-technologies and UI, Web Page designing.<pre></p>
+    </div>
+    <hr>
+    <div id="qual">
+        <h2>Qualification</h2>
+        <p>Self-motivated and highly reliable university student positioned to contribute strongly to customer service operations demanding tact, enthusiasm, and an exemplary work ethic.</p>
+        <ul>
+            <li><span>Communication and Presentation : </span> Charismatic communicator in speech and in writing. Build lasting relationships with both peers and customers, displaying humor, helpfulness, cheerfulness, and cultural sensitivity.</li>
+            <li><span>Key Strengths : </span>Intelligent and loyal team member, readily listening to others, acknowledging peer accomplishment, and contributing to positive and productive work environments and team morale. Swiftly learn and apply new work methods, procedures, and policies.</li>
+            <li>Active volunteer in NSS for 3 years</li>
+        </ul>
+    </div>
+    <hr>
+    <div id="edu">
+        <h2>Education</h2>
+        <p>
+            <span id="id1"><b>Bachelor of Computer Science : </b></span>8.85 CGPA (2019-current)<br>
+            DKTE Society's Textile and Engg. Institute, Ichalkaranji, Maharashtra<br>
+            Pursuing <br>
+        </p>
+        <p>
+            <span id="id1"><b>Higher Secondary School : </b></span>82.00% (2017-2019) <br>Ichalkaranji High School and Jr. College, Ichalkaranji, Maharashtra<br>
+            Completed <br>
+        </p>
+        <p>
+            <span id="id1"><b>Secondary School : </b></span>95.00% (2016-2017) <br>
+            Saraswati High School, Ichalkaranji, Maharashtra <br>
+            Completed <br>
+        </p>     
+    </div>
+    <hr>    
+    <div>
+        <h2>Projects</h2>
+        <ul>
+            <li>Bit String Recording</li>
+            <li>Hand Guesture Recognization</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h2>Programming Skills</h2>
+        <ul>
+            <li>C (Intermediate) <img src="three.png" alt="three" height="20px" style="float:right"></li>
+            <li>CPP (Advance) <img src="five.png" alt="five" height="20px" style="float:right"></li>
+            <li>Java (Intermediate) <img src="three.png" alt="three" height="20px" style="float:right"></li>
+            <li>Python (Intermediate) <img src="three.png" alt="three" height="20px" style="float:right"></li>
+            <li>Web Tehnology (Intermediate) <img src="three.png" alt="three" height="20px" style="float:right"></li>
+        </ul>
+    </div>
+    <hr>
+</body>
+</html>
+
+
+CSS FILE: 
+
+h1{
+    color: #FF4500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    text-shadow: 2px 2px 5px black;
+    text-transform: uppercase;
+}
+body{
+    margin: 30px 250px 30px 200px;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    width: 70%;
+    color: white;
+    /* text-align: center; */
+}
+h2{
+    color: #4169E1;
+    font-family: "Times New Roman";
+    font-style: normal;
+    text-shadow: 1px 1px 0px black;
+}
+p, pre{
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 18px;
+}
+ul{
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 18px;
+}
+#tb1{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+span{
+    color: rgb(255, 0, 0); 
+    font-family: "Times New Roman";
+    font-size: 18px;
+}
+#id1{
+    color: chocolate;
+    font-family: "Times New Roman";
+    font-size: 19px;
+}
+hr{
+    height: 0.5px;
+    border: 0.5px solid yellow;
+}
+
+
+==============================================================================
+
+Experiment No. 3
+
+Algorithm: 
+
+1. Install apache tomcat
+2. Configure apache tomcat for deployment of HTML pages
+3. Deploy HTML and CSS on server
+4. Send request from client for HTML pages deployed at server
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - CREATURES</title>
+  <style>
+    .element {
+      flex: 1;
+      position: relative;
+      margin: 10px;
+      height: 40vh;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .element img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .showonhover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0);
+      color: rgba(255, 255, 255, 0);
+      font-size: 20px;
+      text-align: center;
+      line-height: 100%;
+    }
+
+    .showonhover:hover {
+      padding-top: 25%;
+      background-color: rgba(0, 0, 0, 0.452);
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      line-height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 style="text-align: center">Creatures On our planet</h2>
+  <p style="text-align: center">
+    <a href="index.html">Home</a>
+    <a href="animals.html">Animals</a>
+    <a href="birds.html">Birds</a>
+    <a href="insects.html">Insects</a>
+  </p>
+  <div style="display: flex">
+    <div class="element">
+      <img alt="" src="allanimals.jpg" />
+      <a href="animals.html" class="showonhover"> Animals </a>
+    </div>
+    <div class="element">
+      <img alt="" src="birds.jpg" />
+      <a href="birds.html" class="showonhover"> Birds </a>
+    </div>
+    <div class="element">
+      <img alt="" src="insects.webp" />
+      <a href="insects.webp" class="showonhover"> Insects </a>
+    </div>
+  </div>
+</body>
+
+</html>
+
+==================================================================================
+Experiment No. 04
+Title: Write a JavaScript to compute mathematical operations on Client side. 
+
+Algorithm:
+1. Design html form with multiple textbox and button.
+2. Add event handler with onclick event
+3. Call add function on onclick event
+4. Perform various arithmetic operations
+5. Display Result 
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client-side Calculator</title>
+    <style>
+      .container {
+        width: 400px;
+        border: 2px solid black;
+        padding: 10px 20px;
+        text-align: center;
+        box-shadow: 2px 2px 20px 10px rgba(255, 255, 255, 0.2);
+      }
+      .title {
+      }
+      .input:focus {
+        border: 0;
+        text-align: right;
+        /* margin-right: 38px; */
+        outline: none;
+        font-size: 32px;
+      }
+      .input:disabled {
+        font-size: 30px;
+        border: 0;
+        text-align: right;
+      }
+      .output {
+        text-align: right;
+        font-size: 40px;
+        padding: 0 16px 0 0;
+        color: #aaa;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        margin-top: 10vh;
+      }
+      .row {
+        display: flex;
+        justify-content: space-around;
+      }
+      .btn {
+        width: 100%;
+        height: 30px;
+        box-shadow: 2px 2px 20px 3px rgba(195, 243, 105, 0.2);
+        margin: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1 class="title">Client-side Calculator</h1>
+        <input
+          autocomplete="off"
+          class="input"
+          type="text"
+          placeholder="0"
+          name="input"
+          disabled
+          id="input1"
+        />
+        <div class="output">=0</div>
+        <div class="btns">
+          <div class="row">
+              <button class="btn">All Clear</button>
+          </div>
+
+          <div class="row">
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">/</button>
+          </div>
+          <div class="row">
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">*</button>
+          </div>
+          <div class="row">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">-</button>
+          </div>
+          <div class="row">
+            <button class="btn">0</button>
+            <button class="btn">.</button>
+            <button class="btn">=</button>
+            <button class="btn">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".btn").forEach((btn) =>
+        btn.addEventListener("click", (e) => {
+          var btn = e.target.innerText;
+          var input = document.querySelector(".input");
+          var output = document.querySelector(".output");
+          if (btn === "All Clear") {
+            input.value = "";
+            output.innerHTML = "=0";
+            return;
+          }
+          var val = input.value;
+          if (btn === "=") {
+            try {
+              output.innerHTML = "=" + parseFloat(eval(val)).toFixed(4);
+            } catch {}
+            return;
+          }
+          input.value = input.value + btn;
+          val = input.value;
+          try {
+            output.innerHTML = "=" + parseFloat(eval(val)).toFixed(4);
+          } catch {}
+        })
+      );
+    </script>
+  </body>
+</html>
+
+==================================================================================================
+Experiment No. 05
+Title: Write a JavaScript for voter registration form validation at client side. 
+
+Algorithm:
+1. Design voter registration html form with multiple textbox and a submit button.
+2. The data entered by user include Name, DOB, Adhar Number, E-mail ID, Address etc.
+3. Validate the entered data at client side using javascript.
+4. Display Result 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Registration</title>
+    
+    <style type="text/css">
+        body{ 
+            width: 65%;
+            height: 75%;
+            margin: 50px auto ;
+        }
+        #div1{
+            text-indent: 50px;
+            align-items: center;
+            display: block;
+            font-size: 20px;
+            background-color: rgb(217, 226, 225);
+            border: 2px solid black;
+            border-radius: 6px;
+        }
+        h1{
+            text-shadow: 4px blacks;
+            color: rgb(255, 0, 64);
+        }
+        p{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        label{
+            display: inline-block;
+            width: 300px;
+            text-align: left;
+        }
+        input[type=submit] {
+            background-color: #62529c;
+            border: 1px black;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px 0 rgb(0,0,0,0.2),0 6px 20px 0 rgb(0,0,0,0.19);
+            color: #fff;
+            padding: 14px 40px;
+            text-decoration: none;
+            margin: auto;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            justify-content: center;
+            display:grid;
+          }
+    </style>
+    <script>
+        function validateName()
+        {
+            let fname = document.forms["myform"]["fname"].value;
+            let mname = document.forms["myform"]["mname"].value;
+            let lname = document.forms["myform"]["lname"].value;
+            var regex = /^[A-Za-z]+$/;
+            if (fname.match(regex) && mname.match(regex) && lname.match(regex)) {
+                return true;
+            }
+            else {
+                alert("Enter the valid name !!!");
+                return false;
+            }
+        }
+        function validateContact()
+        {
+            let mobile = document.forms["myform"]["mob"].value;
+            if(mobile.length==10)
+            {
+                return true;
+            }
+            else{
+                alert("Contact Number should be of 10 digits");
+                return false;
+            }
+        }
+        function validateMail()
+        {
+            let mail = document.forms["myform"]["email"].value;
+            let regex3 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if((regex3.test(mail)))
+            {
+                return true;
+            }
+            else{
+                alert("Enter Valid E-Mail ID !!!");
+                return false;
+            }
+        }
+        function validateAadhar()
+        {
+            let adh = document.forms["myform"]["aadhar"].value;
+            if(adh.length==12)
+            {
+                return true;
+            }
+            else{
+                alert("Aadhar Number should of 12 digits");
+                return false;
+            }
+
+        }
+        function validateAddress()
+        {
+            let addr = document.forms["myform"]["addre"].value;
+            if(addr=="")
+            {
+                alert("Fill out the Address !!!");
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+        function validateDOB()
+        {
+            //let date = document.forms["myform"]["dob"].value;
+            let date = new Date(document.getElementById("dob").value);
+            var year = date.getFullYear();
+            if((year>2003)){
+                alert("You are not eligible for Voter Registration !!!");
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+        function validateForm() {
+            
+            if(!(validateName()))
+            { 
+                return false;                
+            }
+            if(!validateDOB())
+            {
+                return false;
+            }
+            if(!validateMail())
+            {
+                return false;
+            }
+            if(!validateContact()) 
+            {
+                return false;
+            }
+            if(!validateAadhar())
+            {
+                return false;
+            }
+            if(!validateAddress())
+            {
+                return false;
+            }
+            else
+            {
+                let text = "You have successfully Registered for Voter Card :)";
+                var w=window.open("")
+                w.document.write(text)
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 align="center"><b>VOTER ID REGISTRATION</b></h1>
+    <div id="div1">
+        <form action="send.php" method="post" name="myform" onsubmit="return validateForm()">
+            <p>
+                <label for="fname">First Name : </label>
+                <input type="text" id="fname" name="fname" size="40" rounded required>
+            </p>
+            <p>
+                <label for="mname">Middle Name : </label>
+                <input type="text" id="mname" name="mname" size="40" rounded required>
+            </p>
+            <p>
+                <label for="lname">Last Name : </label>
+                <input type="text" id="lname" name="lname" size="40" rounded required>
+            </p>
+            <p>
+                <label for="dob">Date Of Birth : </label>
+                <input type="date" id="dob" name="dob" size="40" rounded required>
+            </p>
+            <p>
+                <label for="email">Email ID : </label>
+                <input type="email" name="email" id="email" size="40" rounded>
+            </p>
+            <p>
+                <label for="mob">Contact Number : </label>
+                <input type="number" id="mob" name="mob" size="40" rounded>
+            </p>
+            <p>
+                <label for="aadhar">Aadhar Number : </label>
+                <input type="number" name="aadhar" id="aadhar" size="40" rounded>
+            </p>
+            <p>
+                <label for="addre">Permanent Address : </label>
+                <input type="text" name="addre" id="addre" size="40" rounded>
+            </p>
+            <p>
+                <input type="submit" value="Submit" name="submit" rounded>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
+
+OR
+  
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Voter Registration</title>
+    <style>
+      .wrapper {
+        width: 350px;
+        margin: 0 auto;
+      }
+      .container {
+        padding: 40px;
+        background: #fff;
+        border-radius: 5px;
+        border: 2px red solid;
+      }
+      .input {
+        margin: 10px 0px 10px 0px;
+      }
+      .input input,
+      .input textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+      }
+      .btn {
+        padding: 10px;
+        font-size: 15px;
+        color: white;
+        background: #0968c2;
+        border: none;
+        border-radius: 5px;
+      }
+      .error {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+
+      .d-none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container wrapper">
+      <h3 style="text-align: center">Voter Registration Form</h3>
+      <form
+        method="POST"
+        onsubmit="return document.getElementsByClassName('d-none').length===5;"
+        name="myform"
+      >
+        <div class="wrapper">
+          <div class="input">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Firstname Lastname"
+              required
+              onchange="validateField(this, 'name')"
+            />
+            <div class="error name d-none">Invalid Name</div>
+          </div>
+          <div class="input">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="youremail@company.domain"
+              required
+              onchange="validateField(this, 'email')"
+            />
+            <div class="error email d-none">Invalid Email</div>
+          </div>
+          <div class="input">
+            <label for="phone">Phone Number</label>
+            <input
+              type="phone"
+              maxlength="13"
+              name="phone"
+              id="phone"
+              placeholder="+911234567890"
+              required
+              onchange="validateField(this, 'phone')"
+              onfocus="if(this.value.length===0)this.value='+91'"
+            />
+            <div class="error phone d-none">Invalid Phone Number</div>
+          </div>
+          <div class="input">
+            <label for="dob">Date of Birth:</label>
+            <input
+              type="date"
+              name="dob"
+              id="dob"
+              required
+              onchange="validateField(this,'dob')"
+            />
+            <div class="error dob d-none">You are under 18.</div>
+          </div>
+          <div class="input">
+            <label for="aadhar">Aadhar Number</label>
+            <input
+              type="text"
+              name="aadhar"
+              id="aadhar"
+              maxlength="12"
+              placeholder="XXXXXXXXXXXX"
+              required
+              onchange="validateField(this, 'aadhar')"
+            />
+            <div class="error aadhar d-none">Invalid Aadhar number</div>
+          </div>
+          <div class="input">
+            <label for="address">Address</label>
+            <textarea
+              name="address"
+              id="address"
+              onchange="validateField(this,'address')"
+              cols="30"
+              rows="4"
+            ></textarea>
+            <div class="error address d-none">Invalid Address</div>
+          </div>
+          <div class="btns">
+            <button class="btn" type="reset">Reset</button>
+            <button class="btn" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      function validateField(field, name) {
+        var value = field.value;
+        var error = document.getElementsByClassName(name)[0];
+        switch (name) {
+          case "name":
+            if (value.length < 7) {
+              error.classList.remove("d-none");
+            } else {
+              error.classList.add("d-none");
+            }
+            break;
+          case "email":
+            if (!validateEmail(value)) {
+              error.classList.remove("d-none");
+            } else {
+              error.classList.add("d-none");
+            }
+            break;
+          case "dob":
+            if (getAge(value) < 18) {
+              error.classList.remove("d-none");
+            } else {
+              error.classList.add("d-none");
+            }
+            break;
+          case "aadhar":
+            if (value.length != 12 || isNaN(value)) {
+              error.classList.remove("d-none");
+            } else {
+              error.classList.add("d-none");
+            }
+            break;
+          case "address":
+            if (value.length < 10) {
+              error.classList.remove("d-none");
+            } else {
+              error.classList.add("d-none");
+            }
+            break;
+          case "phone":
+            if (value.length != 13 || isNaN(value)) {
+              error.classList.remove("d-none");
+            } else {
+              error.classList.add("d-none");
+            }
+        }
+      }
+      function getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+          age--;
+        }
+        return age;
+      }
+      const validateEmail = (email) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      };
+    </script>
+  </body>
+</html>
+
+Thanks page:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h1 text-center text-primary">Thank You...</h1>
+    </div>
+  </body>
+</html>
+
+========================================================================================================
+
+Experiment No. 06
+Title: Create a webpage containing a carousel using bootstrap framework.
+
+Algorithm:
+1. Design web page using html.
+2. Add a carousal using bootstrap
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#mainCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#mainCarousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img src="../Experiment_No_03/allanimals.jpg" width="100%" style="height: 100vh;" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Animals</h1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../Experiment_No_03/birds.jpg" width="100%" style="height: 100vh;" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Birds</h1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../Experiment_No_03/insects.webp" width="100%" style="height: 100vh;" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Insects</h1>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <h1 class="position-absolute top-0 start-50 translate-middle mt-5 text-white bg-dark">Creatures on Earth</h1>
+</body>
+
+</html>
+
+=====================================================================================================================
+Experiment No. 07
+Title: Write a jQuery script to handle event generated by client and demonstrate use of ajax 
+methods.
+
+Algorithm:
+1. Create the different paragraphs using <p> tag.
+2. Link the jquery library using script tag.
+3. Apply different actions on paragraph like hide, show, toggle, slideup, slidedown using
+different event like click, dblclick, mouseover, keypress etc.
+4. Use Ajax methods to update parts of a web page - without reloading the whole page.
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="div1">
+        <h2>Let jQuery AJAX Change This Text</h2>
+    </div>
+
+    <button>Get External Content</button>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $("#div1").load("Demo.txt");
+        });
+    });
+</script>
+
+</html>
+====================================================================================================================
+Experiment No. 08
+Title: Write a jQuery script to provide animations in web pages.
+
+Algorithm:
+1. Create a web page with different <div> and <p> tags.
+2. Link jQuery library using script tag.
+3. Apply different animation effects link FadeIn, Out, SlideUp, down and animate to
+different content of web page. 
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var div = $("div");
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', opacity: '0.8' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ height: '300px', opacity: '1.0' }, "slow");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button>Start</button>
+
+    <div style="background:#214bbf;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+
+</html>
+===================================================================================================================
+Experiment No.: 09
+Title: Write a program to validate a form using PHP.
+
+Style.css:
+h1{
+    background-color: black;
+    color: white;
+    text-align: center;
+ padding: 15px;
+}
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"]
+{
+    width: 250px;
+    padding:8px;
+}
+input[type="submit"]{
+    margin-left: 550px;
+    width:25%;
+    padding:5px;
+    background-color: black;
+    color:white;
+}
+.ds1{
+    margin-left:35%;
+}
+.ds2{
+    margin-left: 35%;
+}
+.ds3{
+    margin-left: 35%;
+}.ds4{
+    margin-left: 35%;
+}
+.ds5{
+    margin-left:35%;
+}
+
+login.php :
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>voter registration 9</title>
+   
+</head>
+<body>
+    <?php
+    include 'dbcon.php';
+    if(isset($_POST['Submit'])){
+        $name=mysqli_real_escape_string($con,$_POST['name']);
+        $phone=mysqli_real_escape_string($con,$_POST['phone']);
+        $email=mysqli_real_escape_string($con,$_POST['email']);
+        $cpassword=mysqli_real_escape_string($con,$_POST['cpassword']);
+        $conpassword=mysqli_real_escape_string($con,$_POST['conpassword']);
+
+        $cpass=password_hash($cpassword, PASSWORD_BCRYPT);
+        $conpass=password_hash($conpassword, PASSWORD_BCRYPT);
+
+        $emailquery=" select * from registration where email='$email'";
+        $query = mysqli_query($con,$emailquery);
+
+        $emailcount=mysqli_num_rows($query);
+
+
+        if($emailcount>0){
+            echo "email already exist";
+        }else{
+            if($cpassword===$conpassword){
+                $insertquery="insert into registration(	name,	phone,	email	,cpassword,	conpassword	
+                ) values('$name','$phone','$email','$cpass','$conpass')";
+                $iquery= mysqli_query($con,$insertquery);
+                if($iquery){
+                    ?>
+                    <script>
+                        alert("Inserted Successfully");
+                    </script>
+                
+                    <?php
+                }else{
+                    ?>
+                    <script>
+                        alert("Not Inserted");
+                    </script>
+                     <?php
+                }
+            }else{
+                ?>
+                <script>
+                alert("password are not matching");
+                </script>
+                <?php
+            }
+        }
+
+    }
+    ?>
+    <fieldset>
+    <h1>Voter Registration Form</h1>
+    <hr>
+    <form name="myform" onsubmit=" validateform()" method="post">
+        <div class="ds1">
+        <label>Full Name:<label>
+        
+        <input type="text" id="name" name="name" placeholder="Full Name" required><br><br>
+    </div>
+   <hr>
+   <div class="ds2">
+   <label>Phone No.:</label>
+   <input type="number" name="phone" maxlength="10" placeholder="Phone No."><br><br>
+   </div>
+   <hr>
+   <div class="ds3">
+   <label>Email ID:</label>
+   
+       <input type="email" name="email" placeholder="Email ID"><br><br>
+       </div>
+       <hr>
+       <div class="ds4">
+       <label>Create Password:</label>
+   
+       <input type="password" name="cpassword" placeholder="Create Password"><br><br>
+       </div>
+       <hr>
+       <div class="ds5">
+       <label>Confirm Password:</label>
+   
+       <input type="password" name="conpassword" placeholder="Confirm Password"><br><br>
+       </div>
+
+
+       <input type="submit" id="submit" name="Submit">
+    </fieldset>
+      
+       
+        
+    </form>
+</body>
+</html>
+
+dbcon.php:
+<?php
+$server="localhost";
+$user="root";
+$password="";
+$db="ex09";
+
+$con=mysqli_connect($server,$user,$password,$db);
+if($con){
+    ?>
+    <script>
+        alert("Connection Successful");
+    </script>
+
+    <?php
+}else{
+    ?>
+    <script>
+        alert("Not Successful");
+    </script>
+}
+?>
+
+===================================================================================================================
+Experiment No.: 10
+Title: Write a program to insert and display database contents in and from MySQL database 
+using PHP.
+
+Algorithm:
+
+1. Create user using phpMyAdmin.
+2. Create form.php to read students data and put above shown script in it and save it in
+/xampp/htdocs directory.
+3. Create database_handling.php to connect to database and to manipulate data.
+4. In form.php on click submit button invoke database_handling.php script.
+5. In database_handling.php write php functions for connection, selection of database,
+sending Sql queries, retrieving data and display it in tabular format.
+6. Open browser and type http://localhost/form.php
+
+
+Base.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
+</head>
+<body>
+    <form action="send.php" method="post">
+        
+        <label for="Roll No.">Roll Number:</label>
+        <input type="text" name="number" id="number"><br><br>
+        <label for="Name"> Name:</label>
+        <input type="text" name="name" id="name"><br><br>
+        <label for="Class"> Class:</label>
+        <input type="text" name="class" id="class"><br><br>
+        <br>
+        <input type="submit">
+    </form>
+    
+</body>
+</html>
+
+Choose.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Choose the Operation</h1>
+
+    <button onclick="window.location='base.html';">Insert Data</button>
+    <button onclick="window.location='Update.html';">Update Data</button>
+    <button onclick="window.location='Delete.html';">Delete Data</button>
+    <button onclick="window.location='Retrive.php';" >Retrive Data</button>
+</body>
+</html>
+
+Delete.html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
+</head>
+<body>
+    <form action="delete.php" method="post">
+        
+        <label for="Roll No.">Roll Number to Delete:</label>
+        <input type="text" name="number" id="number"><br><br>
+        <input type="submit">
+    </form>
+    
+</body>
+</html>
+
+delete.php:
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "studinfo";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// sql to delete a record
+$sql = "DELETE FROM student WHERE number = '$_POST[number]' ";
+
+if (mysqli_query($conn, $sql)) {
+  echo "Record deleted successfully";
+} 
+else {
+  echo "Error deleting record: " . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+?>
+
+retrive.php:
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "studinfo";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT number, name, class FROM student";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "Number : " . $row["number"]. " Name : " . $row["name"]. " Class : " . $row["class"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();     
+?>
+
+send.php:
+<?php
+$servername ="localhost";
+$username ="root";
+$password ="";
+$dbname ="studinfo";
+
+    $conn = new mysqli($servername,$username,$password,$dbname);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+
+    $sql = "INSERT INTO student (number,name, class)
+        VALUES('$_POST[number]','$_POST[name]','$_POST[class]')";
+
+    if ($conn->query($sql) === TRUE) {
+    echo "Your Responce Submitted successfully";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+        
+
+?>
+
+update.html:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>select Atribute to Update</h2>
+<form action="update.php" method="post">
+  <label for="update">Choose a Atribute:</label>
+  <select id="update" name="update">
+    <option value="name">Name</option>
+    <option value="class">Class</option>
+  </select><br><br>
+  <label for="Roll No. ">Enter number whose data to be updated</label>
+  <input type="text" name="number" id="number"><br><br>
+
+  <label for="value">Enter updated Value</label>
+  <input type="text" name="value" id="value"><br><br>
+
+  <input type="submit">
+</form>
+
+</body>
+</html>
+
+
+update.php:
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "studinfo";
+
+echo "$_POST[update]";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+if ($_POST[update] == "name"){
+    $sql = "UPDATE student SET name = '$_REQUEST[value]' WHERE number='$_REQUEST[number]' ";
+}
+else
+    {
+    $sql = "UPDATE student SET class = '$_REQUEST[value]' WHERE number='$_REQUEST[number]' ";
+}
+if ($conn->query($sql) === TRUE) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . $conn->error;
+}
+
+$conn->close();
+?>
+===================================================================================================================
+
+Experiment No. : 11
+Title: Write a program to manage session using PHP
+
+Algorithm:
+1. Create a login form
+2. Start a session in login_process.php if username and password is same then go to
+secured.php otherwise go back to login.php page
+3. On secured.php page create logout link and jump to logout_process.php
+4. In logout_process.php destroy the session and jump to login.php page.
+
+login.php:
+<?php
+// Starting session
+session_start();
+ 
+// Storing session data
+$_SESSION["username"] = "KingMaker";
+$_SESSION["password"] = "KingMaker#123";
+
+echo 'your login is successful.'
+?>
+
+login_process.php:
+<?php
+// Starting session
+session_start();
+ 
+// Accessing session data
+echo 'Hi, ' . $_SESSION["username"] 
+?>
+
+logout_process.php:
+<?php
+// Starting session
+session_start();
+ 
+
+ 
+// Removing session data
+if(isset($_SESSION["username"])){
+    unset($_SESSION["password"]);
+}
+// Destroying session
+session_destroy();
+echo 'please login again.'
+
+?>
+
+===========================================================================================================
+
+Experiment No. : 12
+Title: Write a program to develop file up-loader form to upload a file using PHP.
+
+Algorithm:
+
+1. Create fileloader.html and put above shown html code in it and save it in
+/xampp/htdocs directory
+2. Create upload_file.php and write above code in it and save it in /xampp/htdocs
+directory.
+3. Open browser and type localhost/fileloader.html
+4. Browse the file and upload any *.gif,*.jpeg or *.pjpeg image with size less than 20000
+bytes
+
+
+uform.html:
+<!DOCTYPE html>
+<html> 
+    <body> 
+        <form action="upload_file.php" method="post" enctype="multipart/form-data"> 
+            <label for="file">Filename: </label> 
+            <input type="file" name="file" id="file" />  <br /> 
+            <input type="submit" name="submit" value="Submit" /> 
+        </form> 
+    </body> 
+    </html> 
+ 
+ upload.php:
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    if ((($_FILES["file"]["type"] == "image/gif") || ($_FILES ["file"] ["type"] == "image/jpg") || ($_FILES ["file"] ["type"] == "image/pjpeg")) && ($_FILES ["file"] ["size"] < 20000)) 
+    {   if ($_FILES["file"]["error"] > 0)     
+        {     
+            echo "Return Code: " . $_FILES ["file"]["error"] . "<br />";     
+        }else{  
+            echo "Upload: " . $_FILES ["file"]["name"] . "<br />";     
+            echo "Type: " . $_FILES ["file"]["type"] . "<br />";     
+            echo "Size: " . ($_FILES ["file"]["size"] / 1024) . " Kb<br />";     
+            echo "Temp file: " . $_FILES ["file"]["tmp_name"] . "<br />"; 
+            if (file_exists("upload/" . $_FILES ["file"]["name"]))       
+            {       
+                echo $_FILES ["file"]["name"] . " already exists. ";       
+            }     else       
+            {       move_uploaded_file ($_FILES["file"]["tmp_name"],”upload/".$_FILES ["file"]["name"]);       
+                echo "Stored in: " . "upload/" . $_FILES ["file"]["name"];       }     }  
+    ?>
+
+</body>
+</html>
+
+
+uploadFilescript.php:
+<?php
+$target_dir ="upload/";
+$target_file = $target_dir . basename($_FILES["file"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+
+if(isset($_POST["submit"]))}{
+    $check = getimagesize($_FILES["file"]["tmp_name"]);
+    if($check !== false){
+        echo "File is an image -" . $check["nature"] . ".";
+        $uploadOk = 1;
+
+    }else{
+        echo "File is not an image."
+    }
+
+}
+?>
+=========================================================================================================
+Experiment No.: 13
+Title: Write a program to create a form to send mail using PHP  mail_form.php
+
+Algorithm:
+1. Create mail_form.php
+2. Open it in bowser with internet connectivity
+3. Fill up form and send mail to self
+4. Test if mail is delivered
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Mail</title>
+</head>
+<body>
+    <?php
+        if(isset($_REQUEST['email']))
+        {
+            $email = $_REQUEST['email'];
+            $subject = $_REQUEST['subject'];
+            $message = $_REQUEST['message'];
+            mail("panuk2001@gmail.com","Subject:$subject",$message,"From:$email");
+            echo "Thank you for using our mail form ! ";
+        }
+        else{
+            echo "<form method='post' action='mail_form.php'>
+            Email: <input name='email' type='txt'/></br>
+            Subject : <input name='subject' type='text'/></br>
+            Message : </br>
+            <textarea   name='message' rows='15' cols='40'>
+            </textarea></br>
+            <input type='submit' value='submit'>
+            </form> ";
+        }
+    ?>
+</body>
+</html>
+
+......................................................................................
+
+send mail.php
+
+<?php
+$to_email = "pk@gmail.com";
+$subject = "Simple Email Test via PHP";
+$body = "Hi, This is test email send by PHP Script";
+$headers = "From: panuk2001@gmail.com";
+
+if (mail($to_email, $subject, $body, $headers)) {
+    echo "Email successfully sent to $to_email...";
+} else {
+    echo "Email sending failed...";
+}
+?>
+
+
+
+
+===================================================================================================
+Experiment No. 14
+Title: Creating valid XML document with Internal DTD and External DTD
+
+Algorithm: 
+1. Analyze the information inside the document.
+2. Define the structure, and the content.
+3. Define the markup to be used and declare it in DTD.
+4. Create the document with the defined markup.
+5. Validate XML document across DTD
+
+exp12.dtd:
+<!ELEMENT DOCUMENT (CUSTOMER)*>
+<!ELEMENT CUSTOMER (NAME,DATE,ORDERS)>
+ <!ELEMENT NAME (FIRST_NAME,LAST_NAME)>
+ <!ELEMENT FIRST_NAME (#PCDATA)>
+ <!ELEMENT LAST_NAME (#PCDATA)>
+ <!ELEMENT DATE (#PCDATA)>
+ <!ELEMENT ORDERS (ITEM)*>
+ <!ELEMENT ITEM (PRODUCT,NUMBER,PRICE)>
+ <!ELEMENT NUMBER (#PCDATA)>
+ <!ELEMENT PRICE (#PCDATA)> 
+
+internal_external.dtd:
+
+<?xml version = "1.0" standalone="no"?>
+  <!DOCTYPE DOCUMENT SYSTEM "exp14.dtd"
+   [ <!ELEMENT PRODUCT (PRODUCT_ID)>
+     <!ELEMENT PRODUCT_ID (#PCDATA)> ]>
+     <DOCUMENT>
+          <CUSTOMER>
+                   <NAME>
+                        <FIRST_NAME>Alan</FIRST_NAME>
+                        <LAST_NAME>turing</LAST_NAME>
+                  </NAME>
+                  <DATE>April 15, 2022</DATE> 
+                    <ORDERS>
+                        <ITEM>
+                            <PRODUCT>
+                                <PRODUCT_ID>198348209</PRODUCT_ID>
+                            </PRODUCT>
+                            <NUMBER>8</NUMBER>
+                            <PRICE>.25</PRICE>
+                        </ITEM>
+                        <ITEM>
+                            <PRODUCT>
+                                <PRODUCT_ID>198348206</PRODUCT_ID>
+                            </PRODUCT>
+                            <NUMBER>6</NUMBER>
+                            <PRICE>.50</PRICE>
+                        </ITEM>
+
+                    </ORDERS>
+         </CUSTOMER>
+    </DOCUMENT> 
+=========================================================================================================
+
+
+
+Experiment No. : 15
+Title : Navigating the Document Object Model tree.   bookstore.html
+Algorithm:
+
+1. create dom object representing the xml document.
+DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+DocumentBuilder builder = factory.newDocumentBuilder();
+Document document = builder.parse("priceList.xml");
+2. get the document root element by using document’s getDocumentElement( ).
+T.Y.B.Tech (CSE)-II Subject: Web Technologies
+3. Traverse the document using dom’s root elements as root node and using following
+Node interface methods.
+  a. NodeList getChildNodes( ).
+  b. String getNodeName( ).
+  c. Boolean hasChildNodes( ).
+4. Use following NodeList interface methods to find no.of children in a node and to
+access nodes in the node list.
+  a. int getLength( ).
+  b. Node item(int index).
+
+<!DOCTYPE html>
+<html>
+    <?xml-stylesheet type="text/xsl" href="bookstore.xml"?>
+<body>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+
+    <script>
+        var parser, xmlDoc;
+        var text = "<bookstore><book>" +
+            "<title>Everyday Italian</title>" +
+            "<author>Giada De Laurentiis</author>" +
+            "<year>2005</year>" +
+            "<price>34</price>"
+            "</book></bookstore>";
+
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(text, "text/xml");
+
+        document.getElementById("demo").innerHTML = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+        document.getElementById("demo1").innerHTML = xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue;
+        document.getElementById("demo2").innerHTML = xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue;
+        document.getElementById("demo3").innerHTML = xmlDoc.getElementsByTagName("price")[0].childNodes[0].nodeValue;
+    </script>
+
+</body>
+
+</html>
+
+
+.......................................................................................
+
+bookstore.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+    <bookstore>
+    <book category="cooking">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <year>2005</year>
+    <price>30.00</price>
+    </book>
+    <book category="children">
+    <title lang="en">Harry Potter</title>
+    <author>J K. Rowling</author>
+    <year>2005</year>
+    <price>29.99</price>
+    </book>
+    </bookstore>
+
+===============================================================================================================
+Experiment No.: 16
+Title : Write XSLT stylesheet to convert XML document to HTML.
+Algorithm:
+
+1. prepare source xml file.
+2. prepare xsl file with required templates.
+3. open the xml file in Intenet Explorer 6.0.
+
+Demo1:
+studentXML.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="studentXSL.xsl"?>
+<class>
+
+    <student>
+        <firstname>Pranav</firstname>
+        <lastname>Bhokare</lastname>
+        <nickname>Panu</nickname>
+    </student>
+    <student>
+        <firstname>ABC</firstname>
+        <lastname>XYZ</lastname>
+        <nickname>ABC</nickname>
+    </student>
+    <student>
+        <firstname>PQR</firstname>
+        <lastname>KLM</lastname>
+        <nickname>PQR</nickname>
+    </student>
+</class>
+
+studentXSL.xsl
+<?xml version="1.0"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/class">
+<html>
+    <body>
+        <h2>Student Info</h2>
+            <table border="1 px">
+                <tr  bgcolor="green">
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Nick Name</th>
+                </tr>
+                <xsl:for-each select="student">
+                <tr>
+                    <td><xsl:value-of select="firstname"/></td>
+                    <td><xsl:value-of select="lastname"/></td>
+                    <td><xsl:value-of select="nickname"/></td>
+                </tr>
+                </xsl:for-each>
+            </table>
+    </body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
+
+DEMO2:
+Store.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="StoreXSL.xsl" type="text/xsl"?>
+<catalog>
+    <product>
+        <name>Laptop</name>
+        <price>63000</price>
+        <model>ASUS TUF F15</model>
+        <warrenty>1 year</warrenty>
+        <weight>2.2 kg</weight>
+    </product>
+    <product>
+        <name>Mobile</name>
+        <price>58000</price>
+        <model>iPhone Pro 13</model>
+        <warrenty>1 year</warrenty>
+        <weight>0.4 kg</weight>
+    </product>
+    <product>
+        <name>TV</name>
+        <price>30000</price>
+        <model>Samsung A10</model>
+        <warrenty>5 year</warrenty>
+        <weight>4 kg</weight>
+    </product> 
+    <product>
+        <name>Washing Machine</name>
+        <price>60000</price>
+        <model>Whirpool</model>
+        <warrenty>10 year</warrenty>
+        <weight>8 kg</weight>
+    </product> 
+    <product>
+        <name>Oven</name>
+        <price>10000</price>
+        <model>Bajaj 25 L</model>
+        <warrenty>3 year</warrenty>
+        <weight>2 kg</weight>
+    </product> 
+</catalog>
+
+StoreXSL.xsl
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/catalog">
+        <html>
+            <head>
+                <title>Store</title>
+            </head>
+            <body>
+                <h2>Store Catalog</h2>
+                <table border="1 px">
+                    <tr bgcolor="lightblue">
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Model</th>
+                        <th>Warrenty</th>
+                        <th>Weight</th>
+                    </tr>
+                    <xsl:for-each select="product">
+                    <tr bgcolor="black" style="color:white;">
+                        <td><xsl:value-of select="name"/></td>
+                        <td><xsl:value-of select="price"/></td>
+                        <td><xsl:value-of select="model"/></td>
+                        <td><xsl:value-of select="warrenty"/></td>
+                        <td><xsl:value-of select="weight"/></td>
+                    </tr>
+                    </xsl:for-each>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
+========================================================================================================================================
+<!doctype html>
+<html>
+<head>
+<script>
+  
+function add()
+{
+  var num1, num2, sum;
+  num1 = parseInt(document.getElementById("a").value);
+  num2 = parseInt(document.getElementById("b").value);
+  sum = num1+ num2;
+  document.getElementById("ans").value = sum;
+}
+function div()
+{
+  var num1, num2, div;
+  num1 = parseInt(document.getElementById("a").value);
+  num2 = parseInt(document.getElementById("b").value);
+  div = num1 / num2;
+  document.getElementById("ans").value = div;
+}
+function sub()
+{
+  var num1, num2, sub;
+  num1 = parseInt(document.getElementById("a").value);
+  num2 = parseInt(document.getElementById("b").value);
+  sub = num1 - num2;
+  document.getElementById("ans").value = sub;
+}function mul()
+{
+  var num1, num2, mul;
+  num1 = parseInt(document.getElementById("a").value);
+  num2 = parseInt(document.getElementById("b").value);
+  mul = num1 * num2;
+  document.getElementById("ans").value = mul;
+}
+</script>
+
+<style>
+     body{
+        background-image: url("cal4.jpg");
+        background-size: cover;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-image: fixed;
+	
+	
+     }
+   
+    button {
+	height:50px;
+	width:190px;
+	font-size:30px;
+
+}
+	input {
+	height: 50px;
+	width: 250px;
+	font-size:40px;
+}
+    
+  
+</style>
+</head>
+<body>
+
+
+<center>
+<h1 style="font-size:70px;" ><u>Calculator Using Javascript</u></h1>
+</center>
+
+<p style="font-size:40px; margin-left:24%;">Enter the First Number :<input size="50" id="a" ></p>
+<p style="font-size:40px; margin-left:24%;">Enter the Second Number :<input size="50" id="b"></p>
+<center>
+<button onclick="add()">Add</button>
+<button onclick="sub()">Subtract</button>
+<button onclick="div()">Divide</button>
+<button onclick="mul()">Multiply</button>
+</center>
+<p style="font-size:40px; margin-left:24%;">Result : <input id="ans"></p>
+
+
+</body>
+</html>
